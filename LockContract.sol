@@ -32,7 +32,7 @@ contract LockedFunds {
         uint256 newLockedFunds = currentLockedFunds + amount;
         _lockedFunds[_owner] = newLockedFunds;
 
-        uint256 unlockTime = block.timestamp + 5 minutes;
+        uint256 unlockTime = block.timestamp + 60 days;
         if (unlockTime > _unlockTimestamp[_owner]) {
             _unlockTimestamp[_owner] = unlockTime;
         }
